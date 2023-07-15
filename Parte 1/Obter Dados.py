@@ -1,13 +1,15 @@
 import gwosc
-from pycbc import catalog
-#import pandas as pd
 
-#Criar variaveis
-data = []
+import pycbc.catalog
+
+
+c = pycbc.catalog.Catalog(source='gwtc-2')
+print(c.names)
+
+#data = []
 #Obter todos os dados do gwosc
-#catalogo = find_datasets(type="catalog")
-for cat in catalog.Catalog():
-    print(cat)
+#for cat in catalog.Catalog():
+#    print(cat)
 
 #Verificando todos os eventos
 #info = [e, dados["GPS"], dados["UTC"], dados["mass_1"], dados["mass_2"], dados["final_mass"], dados["peak_frequency"]]
