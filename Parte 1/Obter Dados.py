@@ -1,6 +1,6 @@
 import gwosc
 from pycbc import catalog
-import pandas as pd
+#import pandas as pd
 
 #Criar variaveis
 data = []
