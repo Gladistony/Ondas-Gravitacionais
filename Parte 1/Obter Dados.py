@@ -1,21 +1,23 @@
-import gwosc
+#import gwosc
+from pycbc import catalog
 
-import pycbc.catalog
 
+c = catalog.Catalog()
+#mchirp = c.median1d('mchirp')
+#print(mchirp)
 
-c = pycbc.catalog.Catalog(source='gwtc-2')
-print(c.names)
+def dataCatalogo(nome):
+	m = catalog.Merger(nome)
+	return m.data
 
-#data = []
-#Obter todos os dados do gwosc
-#for cat in catalog.Catalog():
-#    print(cat)
+print(dataCatalogo("GW170817"))
 
-#Verificando todos os eventos
-#info = [e, dados["GPS"], dados["UTC"], dados["mass_1"], dados["mass_2"], dados["final_mass"], dados["peak_frequency"]]
-#data.append(info)
+# or from a specific merger
+#m = catalog.Merger("GW170817")
+#mchirp_gw170817 = m.median1d('mchirp')
+#massa1 = m.median1d('mass1')
+#print('GW170817: {}'.format(mchirp_gw170817))
+#print(massa1)
 
-# Criando config do pandas
-#df = pd.DataFrame(data, columns=["Nome da onda", "Data (GPS)", "Data (UTC)", "Massa 1", "Massa 2", "Massa Final", "Frequencia Peak"])
-#df.to_excel("ondas gravitacionais gwosc.xlsx", index=False)
-print("Arquivo criado com sucesso")
+# print parameters that can be read
+#print(m.data.keys())
