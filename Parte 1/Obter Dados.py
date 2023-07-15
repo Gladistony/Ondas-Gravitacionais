@@ -5,7 +5,7 @@ from pycbc import catalog
 #Criar variaveis
 data = []
 #Obter todos os dados do gwosc
-catalogo = find_datasets(type="catalog")
+#catalogo = find_datasets(type="catalog")
 for cat in catalog.Catalog():
     print(cat)
 
